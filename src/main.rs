@@ -1,13 +1,10 @@
-use testing::roman_to_int;
-// Symbol       Value
-// I             1
-// V             5
-// X             10 L             50
-// C             100
-// D             500
-// M             1000
+use testing::longest_common_prefix;
 
 fn main() {
-    let res = roman_to_int(String::from("MCMXXXII")); // 1932
+    let res = longest_common_prefix::longest_common_prefix(vec![
+        String::from("flower"),
+        String::from("flow"),
+        String::from("flight"),
+    ]);
     println!("{:#?}", res);
 }
