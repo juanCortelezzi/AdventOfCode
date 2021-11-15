@@ -1,5 +1,3 @@
-extern crate test;
-
 // Symbol       Value
 // I             1
 // V             5
@@ -16,11 +14,13 @@ extern crate test;
 /// to the accumulated value.
 ///
 /// ```
-/// use testing::roman_to_int::roman_to_int_func;
+/// use puzzles::leetcode::roman_to_int::roman_to_int_func;
 ///
 /// let result = roman_to_int_func(String::from("MCMXXXII"));
 /// assert_eq!(result, 1932);
 /// ```
+extern crate test;
+
 pub fn roman_to_int_func(s: String) -> i32 {
     s.to_uppercase()
         .chars()

@@ -1,10 +1,5 @@
-use testing::longest_common_prefix;
+use puzzles::aoc::twenty_one::solve;
 
 fn main() {
-    let res = longest_common_prefix::longest_common_prefix(vec![
-        String::from("flower"),
-        String::from("flow"),
-        String::from("flight"),
-    ]);
-    println!("{:#?}", res);
+    println!("{}", solve().unwrap_or(0));
 }
