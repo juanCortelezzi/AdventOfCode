@@ -1,7 +1,7 @@
 #![feature(test)]
 
-pub mod aoc;
-pub mod leetcode;
+pub mod aoc2020;
+pub mod aoc2021;
 pub mod utils {
     use std::fs::File;
     use std::io::{self, BufRead};
