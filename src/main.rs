@@ -1,5 +1,5 @@
-use puzzles::aoc::twenty_one::solve;
+use puzzles::aoc2021::day2::solve_one;
 
 fn main() {
-    println!("{}", solve().unwrap_or(0));
+    solve_one();
 }
