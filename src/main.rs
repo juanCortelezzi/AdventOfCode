@@ -1,6 +1,6 @@
-use puzzles::aoc2021::day11::solve_two;
+use puzzles::aoc2021::day12::solve_one;
 
 fn main() {
-    // solve_one();
-    solve_two();
+    solve_one();
+    // solve_two();
 }
