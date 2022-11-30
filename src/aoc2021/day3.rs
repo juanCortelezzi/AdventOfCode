@@ -51,7 +51,7 @@ fn get_oxygen_rating(mut input: Vec<Vec<usize>>) -> i32 {
 
         input = input
             .into_iter()
-            .filter(|x| x[col] == if one_amount >= zero_amount { 1 } else { 0 })
+            .filter(|x| x[col] == usize::from(one_amount >= zero_amount))
             .collect::<Vec<_>>();
 
         col += 1;
@@ -68,7 +68,7 @@ fn get_co2_rating(mut input: Vec<Vec<usize>>) -> i32 {
 
         input = input
             .into_iter()
-            .filter(|x| x[col] == if one_amount >= zero_amount { 0 } else { 1 })
+            .filter(|x| x[col] == usize::from(one_amount < zero_amount))
             .collect::<Vec<_>>();
 
         col += 1;

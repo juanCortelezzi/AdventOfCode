@@ -1,4 +1,3 @@
-extern crate test;
 use nom::{
     bytes::complete::{tag, take_till},
     character::complete::{self, alpha1, anychar, char},
@@ -6,8 +5,6 @@ use nom::{
     sequence::{preceded, separated_pair, terminated, tuple},
     IResult,
 };
-
-use crate::utils::read_lines;
 
 #[derive(Debug)]
 pub struct PassEntry {
@@ -48,13 +45,10 @@ fn parsed_input() -> Vec<PassEntry> {
     //
     // In this case input is a Vec<PassEntry> where every element represents a password entry in the
     // database
-    read_lines("./src/aoc2020/inputs/day2.txt")
-        .expect("Could not read file")
-        .map(|l| {
-            parse_passentry(&l.unwrap())
-                .expect("Could not parse password")
-                .1
-        })
+    include_str!("./inputs/day2.txt")
+        .trim_end()
+        .lines()
+        .map(|l| parse_passentry(&l).expect("Could not parse password").1)
         .collect()
 }
 
@@ -99,7 +93,6 @@ pub fn solve_two() -> u32 {
 #[cfg(test)]
 mod tests {
     use super::*;
-    use test::Bencher;
 
     #[test]
     fn test_twenty_two_one() {
@@ -109,15 +102,5 @@ mod tests {
     #[test]
     fn test_twenty_two_two() {
         assert_eq!(solve_two(), 584);
-    }
-
-    #[bench]
-    fn bench_twenty_two_one(b: &mut Bencher) {
-        b.iter(solve_one);
-    }
-
-    #[bench]
-    fn bench_twenty_two_two(b: &mut Bencher) {
-        b.iter(solve_two);
     }
 }

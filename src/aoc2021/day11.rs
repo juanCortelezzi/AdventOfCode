@@ -31,7 +31,7 @@ impl Map {
     ];
 
     fn in_bounds(&self, row: i32, col: i32) -> bool {
-        row >= 0 && row < self.height as i32 && col >= 0 && col < self.width as i32
+        row >= 0 && row < self.height && col >= 0 && col < self.width
     }
 
     fn able_to_flash(&self, row: i32, col: i32) -> bool {

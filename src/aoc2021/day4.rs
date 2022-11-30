@@ -19,8 +19,7 @@ impl Board {
 
         lines
             .iter()
-            .map(|s| s.split_whitespace().filter(|s| !s.is_empty()))
-            .flatten()
+            .flat_map(|s| s.split_whitespace().filter(|s| !s.is_empty()))
             .map(|s| s.parse().expect("could not parse String to u32"))
             .enumerate()
             .for_each(|(i, x)| {

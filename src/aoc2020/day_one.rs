@@ -1,15 +1,14 @@
 extern crate test;
 
-use crate::utils::read_lines;
-
 fn parsed_input() -> Vec<u32> {
     // input is the parsed input file.
     //
     // In this case input is a Vec<u32> where every element represent the year in each line of the
     // input file
-    let mut input: Vec<u32> = read_lines("./src/aoc2020/inputs/day1.txt")
-        .expect("Could not read file")
-        .map(|l| -> u32 { l.unwrap().parse::<u32>().unwrap() })
+    let mut input: Vec<u32> = include_str!("./inputs/day1.txt")
+        .trim_end()
+        .lines()
+        .map(|l| l.parse().unwrap())
         .collect();
 
     input.sort_unstable();
