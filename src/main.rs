@@ -1,5 +1,6 @@
-use aoc::aoc2022::day1::solve_one;
+use aoc::aoc2022::day3::solve_one;
+use aoc::aoc2022::day3::solve_two;
 fn main() {
-    solve_one();
-    // solve_two();
+    // solve_one();
+    solve_two();
 }
