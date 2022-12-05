@@ -1,4 +1,4 @@
-#![feature(iter_collect_into, array_chunks)]
+#![feature(iter_collect_into, array_chunks, iter_array_chunks)]
 
 pub mod aoc2020;
 pub mod aoc2021;
