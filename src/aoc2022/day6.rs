@@ -1,6 +1,5 @@
 fn get_input() -> &'static str {
     include_str!("./inputs/day6.real")
-    // "zcfzfwzzqfrljwzlrfnpqdbhtmscgvjw"
 }
 
 // answer: 1702
